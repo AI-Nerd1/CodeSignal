@@ -1,2 +1,2 @@
 # Code Signal
-# Coding Challenges
+Coding Challenges
