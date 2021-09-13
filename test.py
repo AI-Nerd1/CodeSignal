@@ -113,3 +113,31 @@ min11 = 2
 s = 20
 
 print(phoneCall(min1, min2_10, min11, s))
+
+def centuryFromYear(year):
+    h = int(year/100)
+    if year < 100:
+        return(1)
+    if year%100 == 0:
+        return(h)
+    else:
+        if year > 100:
+            return(h+1)
+
+year = 1930
+x = centuryFromYear(year)
+print(x)
+
+
+def reachNextLevel(experience, threshold, reward):
+    if (experience + reward) > threshold-1:
+        return True
+    else:
+        return False
+    
+    
+experience = 10
+threshold = 15
+reward = 5
+    
+print(reachNextLevel(experience, threshold, reward))
