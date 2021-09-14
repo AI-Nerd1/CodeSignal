@@ -141,3 +141,70 @@ threshold = 15
 reward = 5
     
 print(reachNextLevel(experience, threshold, reward))
+
+
+
+def knapsackLight(value1, weight1, value2, weight2, maxW):
+    one = value1*weight1
+    two = value2*weight2
+    if weight1 > maxW:
+        return value2
+    if weight2 > maxW:
+        return value1
+    if weight1 > maxW and weight2>maxW:
+        return (0)
+    if (weight1 + weight2) <= maxW:
+        return (value1 + value2)
+    if (weight1 + weight2) > maxW:
+        if one > two:
+            return value1
+        else:
+            return value2
+
+value1 = 10
+weight1 = 5
+value2 = 6
+weight2 = 4
+maxW = 8
+x = knapsackLight(value1, weight1, value2, weight2, maxW)
+print(x)
+
+
+
+def knapsackLight(value1, weight1, value2, weight2, maxW):
+    one = value1+weight1
+    two = value2+weight2
+    if weight1 == maxW and weight1 >= weight2 and weight2 > maxW:
+        return value1
+    elif weight2 == maxW and weight2 >= weight1 and weight1 > maxW:
+        return value2
+    elif value1 == value2 and weight1 == weight2:
+        return value1
+    elif one == two:
+        if value1 > value2:
+            return value1
+        elif value2 > value1:
+            return value2
+    elif weight1 > maxW and weight2>maxW:
+        return (0)
+    elif (weight1 + weight2) <= maxW:
+        return (value1 + value2)
+    elif weight1 > maxW:
+        return value2
+    elif weight2 > maxW:
+        return value1
+    elif (weight1 + weight2) > maxW:
+        if one > two:
+            return value1
+        elif two > one:
+            return value2
+    
+    
+
+value1 = 10
+weight1 = 5
+value2 = 6
+weight2 = 4
+maxW = 8
+x = knapsackLight(value1, weight1, value2, weight2, maxW)
+print(x)
