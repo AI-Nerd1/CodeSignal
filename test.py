@@ -228,3 +228,44 @@ b = 6
 
 y = isInfiniteProcess(a, b)
 print(y)   
+
+
+
+def arithmeticExpression(a, b, c):
+    if a+b == c:
+        return True
+    elif a-b == c:
+        return True
+    elif a*b == c:
+        return True
+    elif a/b == c:
+        return True
+    else:
+        return False
+        
+a = 2
+b = 3
+c = 5
+
+x = arithmeticExpression(a, b, c)
+print(x)
+
+
+def tennisSet(score1, score2):
+    if score1 == score2:
+        return False
+    elif score1 <= 6 and score2 < 5:
+        return True    
+    elif score1 < 5 and score2 <= 6:
+        return True
+    elif score1 >= 5 and score2 == 7:
+        return True
+    elif score2 >= 5 and score1 == 7:
+        return True
+    else:
+        return False
+        
+score1 = 3
+score2 = 6
+
+print(tennisSet(score1, score2))
