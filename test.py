@@ -208,3 +208,23 @@ weight2 = 4
 maxW = 8
 x = knapsackLight(value1, weight1, value2, weight2, maxW)
 print(x)
+
+
+def isInfiniteProcess(a, b):
+    x = True
+    while b > 1:
+        if a == b:
+            x = False
+        a += 1
+        b -= 1
+    if x is False:
+        return False
+    else:
+        return True 
+        
+         
+a = 2
+b = 6
+
+y = isInfiniteProcess(a, b)
+print(y)   
