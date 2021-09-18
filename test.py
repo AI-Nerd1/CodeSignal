@@ -269,3 +269,38 @@ score1 = 3
 score2 = 6
 
 print(tennisSet(score1, score2))
+
+a = int(input("a: "))
+b = int(input("b: "))
+count = 1
+if a % 2 == 0 and b % 2 == 0:
+    count +=1
+if a % 3 == 0 and b % 3 == 0:
+    count +=1
+if a % 5 == 0 and b % 5 == 0:
+    count += 1
+if a % 7 == 0 and b % 7 == 0:
+    count += 1
+
+print(count)
+
+N = 5
+A = [1, 2, 3, 4, 5]
+total = sum(A)
+avg = A/N # not checking for zero-divide because conditions say N > 1
+x = floor(avg + 1)
+print(x)
+
+# Write your code here
+import numpy as np
+A= [1, 2, 3,4,5]
+
+for i in range(1, max(A)+1):
+    old = sum(A)
+    new = sum(i*np.ones(len(A)))
+    
+    diff = new-old
+    if diff>0:
+        print(i)
+        break
+
