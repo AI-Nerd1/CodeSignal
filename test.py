@@ -288,7 +288,7 @@ N = 5
 A = [1, 2, 3, 4, 5]
 total = sum(A)
 avg = A/N # not checking for zero-divide because conditions say N > 1
-x = floor(avg + 1)
+# x = floor(avg + 1)
 print(x)
 
 # Write your code here
@@ -304,3 +304,40 @@ for i in range(1, max(A)+1):
         print(i)
         break
 
+def turn_right():
+        turn_left()
+        turn_left()
+        turn_left()
+def turn_around():
+    turn_left()
+    turn_left()
+
+def end():
+    turn_right()
+    move()
+    turn_right()
+    drop()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    done()
+
+def drop():
+    while carries_object():
+        if wall_in_front():
+            toss()
+            
+def pick():
+    while object_here():
+        take()
+def motion():
+    while front_is_clear() and wall_on_right():
+        move()
+        pick()
+        if wall_in_front():
+            turn_left()
+
+motion()
+end()
+      
