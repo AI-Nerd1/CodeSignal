@@ -341,3 +341,65 @@ def motion():
 motion()
 end()
       
+
+def checkPalindrome(inputString):
+    if inputString == inputString[::-1]:
+        return True
+    else:
+        return False
+        
+inputString = "Adeda"
+inputString = inputString.lower()
+x = checkPalindrome(inputString)
+print(x)
+
+def adjacentElementsProduct(inputArray):
+    largest_element = inputArray[0]
+    second_largest = inputArray[0]
+    
+    smallest_element = inputArray[0]
+    second_smallest = inputArray[0]
+    
+    for x in range(len(inputArray)):
+        if inputArray[x] > largest_element:
+            largest_element = inputArray[x]
+    
+    for y in range(len(inputArray)):
+         if inputArray[y] < largest_element:
+            if inputArray[y] > second_largest:
+                second_largest = inputArray[y]
+    
+    for x in range(len(inputArray)):
+        if inputArray[x] < smallest_element:
+            smallest_element = inputArray[x]
+    
+    for y in range(len(inputArray)):
+         if inputArray[y] > smallest_element:
+            if inputArray[y] < second_smallest:
+                second_smallest = inputArray[y]
+    
+    largest_pos_prod = largest_element * second_largest
+    largest_neg_prod = smallest_element * second_smallest
+    
+    if largest_pos_prod > largest_neg_prod:
+        return largest_pos_prod
+    else:
+        return largest_neg_prod
+
+inputArray = [4,3,9,2,4,-5,-3]    
+x = adjacentElementsProduct(inputArray)
+print(x)
+   
+    
+inputArray = [4,3,9,2,4,-5,-3,]     
+def adjacentElementsProduct(inputArray):
+    largest_element = 0
+        
+    for x in range(len(inputArray)-1):
+        y = (inputArray[x] * inputArray[x+1])
+        if y > largest_element:
+            largest_element = (inputArray[x]* inputArray[x+1])
+    print(largest_element)
+    
+adjacentElementsProduct(inputArray)
+ 
