@@ -1,3 +1,4 @@
+!/usr/bin/env python3
 n = 29
 sum = 0
 for x in str(n):
@@ -403,3 +404,27 @@ def adjacentElementsProduct(inputArray):
     
 adjacentElementsProduct(inputArray)
  
+
+
+print("Accessing Students Interest in the class")
+
+print("To access the student's level of interest in the class, \nenter the following factors as seen on faces ")
+
+student_names = []
+student_score = []
+
+student_number = int(input("Number of students in class: "))
+for x in range(student_number):
+    name = str(input(f"{x+1}. Enter student name: "))
+    joy = int(input("Level of Joy(%): "))
+    smile = int(input("Level of smile(%): "))
+    anger = int(input("Level of anger(%): "))
+    contribution = int(input("Level of contribution(%): "))
+    interest = int(input("Level of interest(%): "))
+    print("\n")
+    result = ((((2*joy)+(2*smile)+(2*contribution)+(2*interest))/8) + anger)/2 
+    student_names.append(name)
+    student_score.append(result)
+for x in range(len(student_names)):
+    print(f"{student_names[x]} : {student_score[x]}%")
+
