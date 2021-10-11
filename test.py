@@ -1,4 +1,4 @@
-!/usr/bin/env python3
+#!/usr/bin/env python3
 n = 29
 sum = 0
 for x in str(n):
@@ -428,3 +428,77 @@ for x in range(student_number):
 for x in range(len(student_names)):
     print(f"{student_names[x]} : {student_score[x]}%")
 
+
+
+
+N = int(input("Value for N = "))
+M = int(input("Value for M: "))
+
+arr = []
+for x in range(M):
+    element = input("Element:")
+    arr.append(element)
+
+print(arr)
+
+import time
+# from playsound import playsound
+
+# mp3File = "/home/logan/VS Code Projects/Python/others/single beep.mp3"
+
+# playsound(mp3File)
+
+
+# for x in range(2):
+#     playsound(mp3File)
+    
+from playsound import playsound
+# single_beep1 = "/home/logan/VS Code Projects/Python/others/single beep.mp3"
+single_beep = "/home/logan/VS Code Projects/Python/others/single_beep2.mp3"
+double_beep = "/home/logan/VS Code Projects/Python/others/double_beep2.mp3"
+
+# playsound(single_beep1)
+def dit():
+    playsound(single_beep)
+    # time.sleep(0.3)
+
+def dah():
+    playsound(double_beep)
+    # time.sleep(0.3)
+
+dah()
+dit()
+dit()
+dit()
+
+morse_code = {
+    "A": ".-",
+    "B": "-...",
+    "C": "-.-.",
+    "D": "-..",
+    "E": ".",
+    "F": "..-.",
+    "G": "--.",
+    "H": "....",
+    "I": "..",
+    "J": ".---",
+    "K": "-.-",
+    "L": ".-..",
+    "M": "--",
+    "N": "-.", 
+    "O": "---",
+    "P": ".--.",
+    "Q": "--.-",
+    "R": ".-.",
+    "S": "...",
+    "T": "-",
+    "U": "..-",
+    "V": "...-",
+    "W": ".--",
+    "X": "-..-",
+    "Y": "-.--",
+    "Z": "--..",
+}
+letter = input('Letter: ')
+letter = letter.upper()
+print(morse_code[letter])
