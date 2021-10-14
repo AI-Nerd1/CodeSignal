@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+!/usr/bin/env python3
 n = 29
 sum = 0
 for x in str(n):
@@ -447,16 +447,11 @@ from playsound import playsound
 mp3File = "/home/logan/VS Code Projects/Python/others/single beep.mp3"
 
 playsound(mp3File)
-
-
 for x in range(2):
-    playsound(mp3File)
-    
-from playsound import playsound
-import time
+    playsound(mp3File) 
+
 single_beep = "/home/logan/VS Code Projects/Python/others/single_beep2.mp3"
 double_beep = "/home/logan/VS Code Projects/Python/others/double_beep2.mp3"
-
 def dit():
     playsound(single_beep)
 
@@ -616,3 +611,46 @@ for letter in word:
     time.sleep(0.2)
 out = "".join(out)
 print(f"Morse Encryption : {out}")
+
+
+
+
+def shapeArea(n):
+    start = 1
+    for x in range(n):
+        start += 2
+        mid = start
+        for x in range(n-1):
+            next = 
+
+def shapeArea(n):
+    n = int(input("n = "))
+    middle_row = (n*2)-1
+    side_sum = 0
+    for x in range(n):
+        row = ((n-x)*2)-1
+        side_sum += row
+    side_sum = side_sum - middle_row
+    full_sum =  side_sum * 2
+    total = middle_row + full_sum
+    return total
+
+n = 5
+x = shapeArea(n)
+print(x)
+
+def makeArrayConsecutive2(statues):
+    largest = statues[0]
+    smallest = statues[0]
+    for x in range(len(statues)):
+        if statues[x] > largest:
+            largest = statues[x]
+    for x in range(len(statues)):
+        if statues[x] < smallest:
+            smallest = statues[x]
+    n = 1 + largest - smallest - len(statues)
+    return n
+
+statues = [4, 6, 7, 3, 10, 5]
+x = makeArrayConsecutive2(statues)
+print(x)
