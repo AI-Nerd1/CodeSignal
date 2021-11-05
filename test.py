@@ -654,3 +654,59 @@ def makeArrayConsecutive2(statues):
 statues = [4, 6, 7, 3, 10, 5]
 x = makeArrayConsecutive2(statues)
 print(x)
+
+def turn_right():
+
+    turn_left()
+
+    turn_left()
+
+    turn_left()
+
+    
+
+def turn_around():
+
+    turn_left()
+
+    turn_left()
+
+r1 = 9
+
+r2 = 9
+
+in_game = True
+
+while in_game:
+
+    for x in range(r1):
+
+        move()
+
+    turn_left()
+
+    for x in range(r2):
+
+        move()
+
+    turn_left()
+
+    r1 -=1
+
+    r2 -=1
+
+    if r1 ==0 and r2 == 0:
+
+        for x in range(5):
+
+            move()
+
+        turn_left()
+
+        for x in range(5):
+
+            move()
+
+        print("Back to Goal")
+
+        in_game = False
